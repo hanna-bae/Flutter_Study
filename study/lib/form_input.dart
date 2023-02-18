@@ -12,14 +12,17 @@ class FormInput extends StatelessWidget {
         validator: (value) => value!.isEmpty ? 'can\'t be empty' : null,
         obscureText: text == 'Password' ? true : false,
         decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.green),
+            borderRadius: BorderRadius.zero,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.green),
+            borderRadius: BorderRadius.zero,
+          ),
           hintText: text,
           hintStyle: TextStyle(color: Colors.grey),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(0),
-            borderSide: BorderSide(
-              color: Colors.green,
-            ),
-          ),
+          fillColor: Colors.white,
         ),
       ),
     ]);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'form_input.dart';
+import 'form_button.dart';
 
 class LoginPage extends StatelessWidget {
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
@@ -29,8 +30,7 @@ class LoginPage extends StatelessWidget {
                           child: Column(children: <Widget>[
                             FormInput('Email'),
                             FormInput('Password'),
-                            ElevatedButton(
-                                child: Text("Login"), onPressed: () {}),
+                            FormButton('Sign in'),
                             Text("Forgot Password?"),
                           ])),
                     ),
