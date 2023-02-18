@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'form_input.dart';
 import 'form_button.dart';
 
-class LoginPage extends StatelessWidget {
+class AccountPage extends StatelessWidget {
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
   //private variable
   @override
@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-              Text('EcoReward'),
+              Text('Create Account'),
               Stack(
                 children: <Widget>[
                   Padding(
@@ -28,16 +28,17 @@ class LoginPage extends StatelessWidget {
                       child: Form(
                           key: _formkey,
                           child: Column(children: <Widget>[
-                            FormInput('Email', 'Email'),
-                            FormInput('Password', 'Password'),
-                            FormButton('Sign in'),
-                            Text("Forgot Password?"),
+                            FormInput('User name', 'Your username'),
+                            FormInput('Email', 'EcoReward@GDSC.com'),
+                            FormInput('Password',
+                                'Password must be greater than 8 characters.'),
+                            FormInput('Confirm Password', 'Confirm Password'),
+                            FormButton('Sign up'),
                           ])),
                     ),
                   ),
                 ],
               ),
-              Text("Don't have an account? Sign Up"),
               Container(
                 height: 48 * 0.05,
               )
